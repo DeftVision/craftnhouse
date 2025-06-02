@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import { siteConfig } from '../config/site.config';
 
 import { LayoutHeroFirst, LayoutCentered, LayoutSidebar } from './index'
