@@ -1,14 +1,19 @@
 import React from 'react';
 import ResponsiveNav from '../components/nav/ResponsiveNav';
-import { Box } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 
 export default function LayoutSidebar({ children }) {
     return (
         <>
             <ResponsiveNav />
-            <Box sx={{ mt: '64px', px: 2 }}>
-                {children}
-            </Box>
+            <Grid container>
+                <Grid item xs={12} md={3} sx={{ bgcolor: 'grey.200', p: 2 }}>
+                    <Typography variant="h6">Sidebar Area</Typography>
+                </Grid>
+                <Grid item xs={12} md={9} sx={{ p: 2 }}>
+                    {children}
+                </Grid>
+            </Grid>
         </>
     );
 }
