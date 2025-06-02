@@ -5,6 +5,21 @@ export default function ContactForm () {
     const [formData, setFormData] = useState({});
     const [error, setError] = useState(false);
 
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const form = e.target;
+        const data = new FormData(form);
+
+        fetch('/', {
+            method: "POST",
+            body: data
+        })
+            .then(() => alert('Form submitted successfully'))
+            .catch((error) => alert('Form submission error: ' + error));
+    }
+
     return (
         <Box
             component='form'
