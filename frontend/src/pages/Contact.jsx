@@ -4,7 +4,15 @@ import ContactForm from '../components/ContactForm'
 
 export default function Contact () {
     return (
-        <Box>
+        <Box
+            sx={{
+                maxWidth: '600px',
+                max: 'auto',
+                py: 4,
+                textAlign: 'center'
+            }}
+
+        >
             <ContactForm />
         </Box>
     );

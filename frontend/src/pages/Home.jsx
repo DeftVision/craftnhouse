@@ -1,10 +1,21 @@
 import React from 'react';
+import { Box, Typography } from '@mui/material';
+
 
 export default function Home () {
     return (
-        <div>
-            Home
-        </div>
+        <Box
+            sx={{
+                maxWidth: '600px',
+                mx: 'auto',
+                py: 4,
+                textAlign: 'center'
+            }}
+
+        >
+            <Typography variant='h4'>Home</Typography>
+            <Typography variant='h5'>This is your homepage content.</Typography>
+        </Box>
     );
 };
 
