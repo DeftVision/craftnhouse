@@ -13,7 +13,7 @@ import {
     useTheme
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
-import { siteConfig } from '../config/site.config.js'
+import { siteConfig } from '../../config/site.config.js'
 import { Link, useLocation } from 'react-router-dom'
 
 export default function MobileNav() {

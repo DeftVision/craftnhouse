@@ -1,24 +1,23 @@
-import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import { Home, About, Contact } from './pages'
-import MobileNav from './components/MobileNav';
+import {Route, Routes} from 'react-router-dom'
+import {About, Contact, Home} from './pages'
+import LayoutWrapper from './layouts/LayoutWrapper';
 import {Box} from "@mui/material";
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-        <MobileNav />
-        <Box sx={{ mt: '64px', px: 2 }}>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
-        </Box>
-    </>
-  )
+    return (
+        <>
+            <LayoutWrapper>
+                <Box sx={{mt: '64px', px: 2}}>
+                    <Routes>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/about" element={<About/>}/>
+                        <Route path="/contact" element={<Contact/>}/>
+                    </Routes>
+                </Box>
+            </LayoutWrapper>
+        </>
+    )
 }
 
 export default App
