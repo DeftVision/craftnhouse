@@ -4,18 +4,44 @@ import { Box, Typography } from '@mui/material';
 
 export default function Home () {
     return (
-        <Box
-            sx={{
-                maxWidth: '600px',
-                mx: 'auto',
-                py: 4,
-                textAlign: 'center'
-            }}
+        <>
+            <Box
+                sx={{
+                    maxWidth: '600px',
+                    mx: 'auto',
+                    py: 4,
+                    textAlign: 'center'
+                }}
 
-        >
-            <Typography variant='h4'>Home</Typography>
-            <Typography variant='h5'>This is your homepage content.</Typography>
-        </Box>
+            >
+                <Typography variant='h4'>Home</Typography>
+                <Typography variant='h5'>This is your homepage content.</Typography>
+            </Box>
+            <Box
+                sx={{
+                    maxWidth: '600px',
+                    mx: 'auto',
+                    py: 4,
+                    textAlign: 'center'
+                }}
+
+            >
+                <Typography variant='h4'>Home</Typography>
+                <Typography variant='h5'>Section 2</Typography>
+            </Box>
+            <Box
+                sx={{
+                    maxWidth: '600px',
+                    mx: 'auto',
+                    py: 4,
+                    textAlign: 'center'
+                }}
+
+            >
+                <Typography variant='h4'>Home</Typography>
+                <Typography variant='h5'>Section 3.</Typography>
+            </Box>
+        </>
     );
 };
 
