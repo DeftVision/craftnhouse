@@ -1,19 +1,19 @@
 import React from 'react';
-import { Box } from '@mui/material'
-import ContactForm from '../components/ContactForm'
+import { Box } from '@mui/material';
+import ContactForm from '../components/ContactForm';
 
-export default function Contact () {
+export default function Contact() {
     return (
         <Box
             sx={{
                 maxWidth: '600px',
-                max: 'auto',
+                mx: 'auto',      // horizontal centering
                 py: 4,
-                textAlign: 'center'
+                px: 2,           // optional: side padding on mobile
+                textAlign: 'center',
             }}
-
         >
             <ContactForm />
         </Box>
     );
-};
+}
