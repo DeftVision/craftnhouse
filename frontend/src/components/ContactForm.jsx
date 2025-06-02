@@ -12,13 +12,18 @@ export default function ContactForm () {
             method='POST'
             data-netlify='true'
             netlify-honeypot='bot-field'
+            sx={{
+                display: 'flex',
+                flexWrap: 'wrap',
+            }}
         >
 
             <input type='hidden' name='form-name' value='contact' />
             <input type='hidden' name='bot-field' />
 
-            <Typography variant='h4'>Contact Us</Typography>
+
             <Stack direction='column' spacing={2}>
+                <Typography variant='h4'>Contact Us</Typography>
                 <TextField
                     type='text'
                     label='Name'
@@ -45,8 +50,9 @@ export default function ContactForm () {
                     required
                     arial-label='Message'
                 />
+                <Button type='submit' variant='contained' sx={{ mt: 2 }}>Submit</Button>
             </Stack>
-            <Button type='submit' variant='contained' sx={{ mt: 2 }}>Submit</Button>
+
         </Box>
     );
 };
