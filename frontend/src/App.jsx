@@ -1,7 +1,7 @@
-import {Route, Routes} from 'react-router-dom'
-import {About, Contact, Home} from './pages'
+import { Route, Routes } from 'react-router-dom'
+import { About, Contact, Home } from './pages/'
 import LayoutWrapper from './layouts/LayoutWrapper';
-import {Box} from "@mui/material";
+import { Box } from "@mui/material";
 
 function App() {
 
