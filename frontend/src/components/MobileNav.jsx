@@ -13,6 +13,7 @@ import {
     useTheme
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
+import { siteConfig } from '../config/site.config.js'
 import { Link, useLocation } from 'react-router-dom'
 
 export default function MobileNav() {
@@ -31,22 +32,34 @@ export default function MobileNav() {
 
     return (
         <AppBar position='static'>
-            <Toolbar>
-                <IconButton
-                    edge='start'
-                    color='inherit'
-                    aria-label='menu'
-                    onClick={toggleDrawer(true)}
-                >
-                    <MenuIcon />
-                </IconButton>
+            <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                {siteConfig.layout.navAnchor === 'left' && (
+                    <IconButton
+                        edge='start'
+                        color='inherit'
+                        aria-label='menu'
+                        onClick={toggleDrawer(true)}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                )}
                 <Typography variant='h6' sx={{ flexGrow: 1 }}>
-                    Site Title
+                    {siteConfig.siteName}
                 </Typography>
+                {siteConfig.layout.navAnchor === 'right' && (
+                    <IconButton
+                        edge='end'
+                        color='inherit'
+                        aria-label='menu'
+                        onClick={toggleDrawer(true)}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                )}
             </Toolbar>
 
 
-            <Drawer anchor='left' open={open} onClose={toggleDrawer(false)}>
+            <Drawer anchor={siteConfig.layout.navAnchor === 'right' ? 'right' : 'left'} open={open} onClose={toggleDrawer(false)}>
                 <Box sx={{ width: 240, padding: 2, boxSizing: 'border-box' }}>
                     <List>
                         <ListItem

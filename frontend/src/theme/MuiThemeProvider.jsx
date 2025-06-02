@@ -1,5 +1,5 @@
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
-import { siteConfig } from '../config/siteConfig';
+import { siteConfig } from '../config/site.config.js';
 
 const theme = createTheme({
     palette: {
