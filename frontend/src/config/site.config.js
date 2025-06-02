@@ -14,5 +14,10 @@ export const siteConfig = {
         accentColor: '#D9B8C4',
         headingFont: 'Playfair Display',
         bodyFont: 'Inter',
-    }
+    },
+    navLinks: [
+        { label: 'Home', path: '/' },
+        { label: 'About', path: '/about' },
+        { label: 'Contact', path: '/contact' }
+    ]
 }
