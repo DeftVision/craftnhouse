@@ -6,7 +6,7 @@ export const siteConfig = {
     },
     features: {
         contactForm: true,
-        scrollAnimations: 'subtle',
+        scrollAnimations: 'fade',
         contactSnackbar: true,
     },
     branding: {
