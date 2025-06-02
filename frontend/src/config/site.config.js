@@ -7,6 +7,7 @@ export const siteConfig = {
     features: {
         contactForm: true,
         scrollAnimations: 'subtle',
+        contactSnackbar: true,
     },
     branding: {
         primaryColor: '#4B3F72',
