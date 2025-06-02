@@ -10,6 +10,6 @@
 # The code being transferred will only contain the frontend, except for the API calls / endpoints, secrets, passwords, integration connections and other sensitive files that GitHub considers sensitive information.
 # GitHub’s definition of sensitive information" is subject to change and Deft Vision LLC's code will abide by these changes.
 
-# Deft Vision reserves the right to destroy all code, files, and projects in Deft Vision LLC's possession after the code is accepted by the customer, unless written permission is given by the customer and / or the "Maintenance Service Package" is purchased by the customer.
+# Deft Vision reserves the right to destroy all code, files, and projects in Deft Vision LLC's possession after the code is accepted by the customer, if the customer abandons the project defined in the terms of service, or violates any # terms at any time or any point in development of the project, unless written permission is given by the customer and / or the "Maintenance Service Package" is purchased by the customer.
 # Code can be transferred via GitHub, .pdf, or .txt files.
 
