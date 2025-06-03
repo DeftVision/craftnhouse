@@ -8,7 +8,7 @@ export default function ServicesGrid() {
             <Typography variant="h4" gutterBottom align="center">Our Services</Typography>
             <Grid container columns={{ initial: 4, sm: 12 }} gap={3}>
                 {[1, 2, 3].map((i) => (
-                    <Grid key={i} columnSpan={{ initial: 4, sm: 4 }}>
+                    <Grid key={i}>
                         <AnimatedBox>
                             <Paper sx={{ p: 3, textAlign: 'center' }}>
                                 <Typography variant="h6">Service {i}</Typography>

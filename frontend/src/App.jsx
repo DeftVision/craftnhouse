@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { About, Contact, Home, PrivacyPolicy, TermsOfService } from './pages';
 import { Hero, Services, Testimonials } from './pages/sections';
 import LayoutWrapper from './layouts/LayoutWrapper';
@@ -10,6 +10,9 @@ function App() {
         <LayoutWrapper>
             <Box sx={{ mt: '64px', px: 2 }}>
                 <Routes>
+                    {/* Always redirect `/` to a valid route */}
+                    <Route path="/" element={<Navigate to="/hero" replace />} />
+
                     {siteConfig.layout.mode === 'multi' ? (
                         <>
                             <Route path="/hero" element={<Hero />} />
@@ -19,7 +22,7 @@ function App() {
                         </>
                     ) : (
                         <>
-                            <Route path="/" element={<Home />} />
+                            <Route path="/home" element={<Home />} />
                             <Route path="/about" element={<About />} />
                             <Route path="/contact" element={<Contact />} />
                         </>
@@ -33,5 +36,6 @@ function App() {
         </LayoutWrapper>
     );
 }
+
 
 export default App;
