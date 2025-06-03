@@ -1,7 +1,7 @@
 export const siteConfig = {
     siteName: 'Gabriel Barrett',
     layout: {
-        type: 'centered',
+        type: 'heroFirst',
         navAnchor: 'left',
         mode: 'multi',
         heroVariant: 'centered'
