@@ -1,10 +1,10 @@
 export const siteConfig = {
     siteName: 'Gabriel Barrett',
     layout: {
-        type: 'centered',
+        type: 'sidebar',
         navAnchor: 'left',
         mode: 'multi',
-        heroVariant: 'centered'
+        heroVariant: 'standard'
     },
     features: {
         contactForm: true,
