@@ -4,6 +4,7 @@ import { siteConfig } from './config/site.config';
 import { Box } from '@mui/material';
 import { Hero, Services, Testimonials } from './pages/sections';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 import { SinglePage, TermsOfService, PrivacyPolicy } from './pages';
 
@@ -26,6 +27,7 @@ function App() {
 
                     <Route path="/terms" element={<TermsOfService />} />
                     <Route path="/privacy" element={<PrivacyPolicy />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </Box>
         </LayoutWrapper>
