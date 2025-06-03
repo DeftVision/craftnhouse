@@ -1,28 +1,36 @@
 export const siteConfig = {
-    siteName: 'Gabriel Barrett',
+    siteName: 'Name',
     layout: {
-        type: 'sidebar',
+        type: 'heroFirst',
         navAnchor: 'left',
-        mode: 'multi',
-        heroVariant: 'standard'
+        mode: 'spa',
+        heroVariant: 'centered'
     },
     features: {
-        contactForm: true,
-        scrollAnimations: 'fade',
-        contactSnackbar: true,
+        contactForm: false,
+        scrollAnimations: 'bold',
+        contactSnackbar: false,
     },
     branding: {
-        primaryColor: '#4B3F72',
-        accentColor: '#D9B8C4',
+        primaryColor: '#32a852',
+        accentColor: '#fced19',
         headingFont: 'Playfair Display',
         bodyFont: 'Inter',
     },
-    navLinks: [
-        { label: 'Hero', path: '/hero' },
-        { label: 'Services', path: '/services' },
-        { label: 'Testimonials', path: '/testimonials' },
-        { label: 'Contact', path: '/contact' }
-    ]
+    navLinks: {
+        spa: [
+            {label: 'Hero', href: '#hero'},
+            {label: 'Services', href: '#services'},
+            {label: 'Testimonials', href: '#testimonials'},
+            {label: 'Contact', href: '#contact'},
+        ],
+        multi: [
+            {label: 'Home', href: '/'},
+            {label: 'Services', href: '/services'},
+            {label: 'Testimonials', href: '/testimonials'},
+            {label: 'Contact', href: '/contact'},
+        ]
+    }
 }
 
 // layout:

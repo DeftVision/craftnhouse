@@ -1,6 +1,6 @@
 import React from 'react';
 import ServicesGrid from '../../components/blocks/ServicesGrid';
 
-export default function Services() {
+export default function Testimonials() {
     return <ServicesGrid />;
 }

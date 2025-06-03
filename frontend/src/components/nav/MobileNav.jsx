@@ -11,10 +11,10 @@ import {
     ListItemText,
     useMediaQuery,
     useTheme
-} from '@mui/material'
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { siteConfig } from '../../config/site.config.js'
-import { Link, useLocation } from 'react-router-dom'
+import { siteConfig } from '../../config/site.config';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function MobileNav() {
     const [open, setOpen] = useState(false);
@@ -22,13 +22,10 @@ export default function MobileNav() {
     const location = useLocation();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-    const toggleDrawer = (state) => () => {
-        setOpen(state);
-    }
+    if (!isMobile) return null;
 
-    if(!isMobile) return null;
-
-
+    const navLinks = siteConfig.navLinks[siteConfig.layout.mode];
+    const toggleDrawer = (state) => () => setOpen(state);
 
     return (
         <AppBar position='static'>
@@ -58,7 +55,6 @@ export default function MobileNav() {
                 )}
             </Toolbar>
 
-
             <Drawer
                 anchor={siteConfig.layout.navAnchor === 'right' ? 'right' : 'left'}
                 open={open}
@@ -75,14 +71,14 @@ export default function MobileNav() {
                     }}
                 >
                     <List disablePadding>
-                        {siteConfig.navLinks.map(({ label, path }) => (
+                        {navLinks.map(({ label, href }) => (
                             <ListItem
                                 button
-                                key={path}
-                                component={Link}
-                                to={path}
+                                key={href}
+                                component='a'
+                                href={href}
                                 onClick={toggleDrawer(false)}
-                                selected={location.pathname === path}
+                                selected={location.pathname === href}
                                 sx={{
                                     px: 2,
                                     '&.Mui-selected': {
@@ -99,9 +95,6 @@ export default function MobileNav() {
                     </List>
                 </Box>
             </Drawer>
-
-
-
         </AppBar>
-    )
+    );
 }
