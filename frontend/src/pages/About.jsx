@@ -15,36 +15,7 @@ export default function About () {
 
            >
                <AnimatedBox>
-                   <Typography variant='h4'>About</Typography>
-                   <Typography variant='h5'>This is your About page content.</Typography>
-               </AnimatedBox>
-           </Box>
-           <Box
-               sx={{
-                   maxWidth: '600px',
-                   mx: 'auto',
-                   py: 4,
-                   textAlign: 'center'
-               }}
-
-           >
-               <AnimatedBox>
-                   <Typography variant='h4'>About</Typography>
-                   <Typography variant='h5'>Section 2</Typography>
-               </AnimatedBox>
-           </Box>
-           <Box
-               sx={{
-                   maxWidth: '600px',
-                   mx: 'auto',
-                   py: 4,
-                   textAlign: 'center'
-               }}
-
-           >
-               <AnimatedBox>
-                   <Typography variant='h4'>About</Typography>
-                   <Typography variant='h5'>Section 3.</Typography>
+                 <Typography>Hero Page</Typography>
                </AnimatedBox>
            </Box>
        </>

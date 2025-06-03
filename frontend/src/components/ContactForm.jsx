@@ -54,7 +54,7 @@ export default function ContactForm() {
             <input type='hidden' name='bot-field' />
 
             <Stack direction='column' spacing={2}>
-                <Typography variant='h4'>Contact Us</Typography>
+                <Typography variant='h4'>Contact Us!</Typography>
                 <TextField
                     type='text'
                     label='Name'

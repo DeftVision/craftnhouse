@@ -1,9 +1,9 @@
 export const siteConfig = {
-    siteName: 'Company Name',
+    siteName: 'Name',
     layout: {
         type: 'heroFirst',
-        navAnchor: 'right',
-        mode: 'multi',
+        navAnchor: 'left',
+        mode: 'spa',
         heroVariant: 'centered'
     },
     features: {
@@ -17,12 +17,20 @@ export const siteConfig = {
         headingFont: 'Playfair Display',
         bodyFont: 'Inter',
     },
-    navLinks: [
-        { label: 'Hero', path: '/hero' },
-        { label: 'Services', path: '/services' },
-        { label: 'Testimonials', path: '/testimonials' },
-        { label: 'Contact', path: '/contact' }
-    ]
+    navLinks: {
+        spa: [
+            {label: 'Hero', href: '#hero'},
+            {label: 'Services', href: '#services'},
+            {label: 'Testimonials', href: '#testimonials'},
+            {label: 'Contact', href: '#contact'},
+        ],
+        multi: [
+            {label: 'Home', href: '/'},
+            {label: 'Services', href: '/services'},
+            {label: 'Testimonials', href: '/testimonials'},
+            {label: 'Contact', href: '/contact'},
+        ]
+    }
 }
 
 // layout:
