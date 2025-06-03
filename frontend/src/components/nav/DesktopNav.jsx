@@ -18,6 +18,7 @@ export default function DesktopNav() {
 
     if (!isDesktop) return null;
 
+    const navLinks = siteConfig.navLinks[siteConfig.layout.mode];
     const align = siteConfig.layout.navAnchor === 'right' ? 'flex-end' : 'flex-start';
 
     return (
@@ -27,14 +28,14 @@ export default function DesktopNav() {
                     {siteConfig.siteName}
                 </Typography>
                 <Box sx={{ display: 'flex', gap: 2 }}>
-                    {siteConfig.navLinks.map(({ label, path }) => (
+                    {navLinks.map(({ label, href }) => (
                         <Button
-                            key={path}
-                            component={Link}
-                            to={path}
+                            key={href}
+                            component='a'
+                            href={href}
                             color='inherit'
                             sx={{
-                                borderBottom: location.pathname === path ? '2px solid white' : 'none',
+                                borderBottom: location.pathname === href ? '2px solid white' : 'none',
                                 borderRadius: 0,
                             }}
                         >
