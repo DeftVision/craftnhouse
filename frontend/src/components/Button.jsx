@@ -1,10 +1,14 @@
 import React from 'react';
-import { Button, Box } from '@mui/material'
+import { Button as MuiButton } from '@mui/material';
 
-export default function Button () {
+export default function Button(props) {
     return (
-        <Box>
-            <Button>Click Me</Button>
-        </Box>
+        <MuiButton
+            variant="contained"
+            color="primary"
+            disableElevation
+            sx={{ borderRadius: 2, textTransform: 'none', ...props.sx }}
+            {...props}
+        />
     );
-};
+}
