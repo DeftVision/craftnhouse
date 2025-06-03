@@ -1,19 +1,19 @@
 export const siteConfig = {
-    siteName: 'Gabriel Barrett',
+    siteName: 'Company Name',
     layout: {
-        type: 'sidebar',
-        navAnchor: 'left',
+        type: 'heroFirst',
+        navAnchor: 'right',
         mode: 'multi',
-        heroVariant: 'standard'
+        heroVariant: 'centered'
     },
     features: {
-        contactForm: true,
-        scrollAnimations: 'fade',
-        contactSnackbar: true,
+        contactForm: false,
+        scrollAnimations: 'bold',
+        contactSnackbar: false,
     },
     branding: {
-        primaryColor: '#4B3F72',
-        accentColor: '#D9B8C4',
+        primaryColor: '#32a852',
+        accentColor: '#fced19',
         headingFont: 'Playfair Display',
         bodyFont: 'Inter',
     },
