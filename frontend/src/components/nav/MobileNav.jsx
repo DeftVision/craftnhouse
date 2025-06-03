@@ -59,33 +59,47 @@ export default function MobileNav() {
             </Toolbar>
 
 
-            <Drawer anchor={siteConfig.layout.navAnchor === 'right' ? 'right' : 'left'} open={open} onClose={toggleDrawer(false)}>
-                <Box sx={{ width: 240, padding: 2, boxSizing: 'border-box' }}>
-                    <List>
+            <Drawer
+                anchor={siteConfig.layout.navAnchor === 'right' ? 'right' : 'left'}
+                open={open}
+                onClose={toggleDrawer(false)}
+            >
+                <Box
+                    sx={{
+                        width: 240,
+                        py: 2,
+                        px: 1,
+                        boxSizing: 'border-box',
+                        display: 'flex',
+                        flexDirection: 'column',
+                    }}
+                >
+                    <List disablePadding>
                         {siteConfig.navLinks.map(({ label, path }) => (
-                            <ListItem disablePadding key={path}>
-                                <ListItemText
-                                    primary={
-                                        <Link
-                                            to={path}
-                                            onClick={toggleDrawer(false)}
-                                            style={{
-                                                display: 'block',
-                                                padding: '12px 16px',
-                                                textDecoration: 'none',
-                                                color: location.pathname === path ? '#fff' : 'inherit',
-                                                backgroundColor: location.pathname === path ? 'rgba(255,255,255,0.1)' : 'transparent',
-                                            }}
-                                        >
-                                            {label}
-                                        </Link>
-                                    }
-                                />
+                            <ListItem
+                                button
+                                key={path}
+                                component={Link}
+                                to={path}
+                                onClick={toggleDrawer(false)}
+                                selected={location.pathname === path}
+                                sx={{
+                                    px: 2,
+                                    '&.Mui-selected': {
+                                        bgcolor: 'grey.100',
+                                    },
+                                    '& .MuiListItemText-root': {
+                                        color: 'text.primary',
+                                    },
+                                }}
+                            >
+                                <ListItemText primary={label} />
                             </ListItem>
                         ))}
                     </List>
                 </Box>
             </Drawer>
+
 
 
         </AppBar>
