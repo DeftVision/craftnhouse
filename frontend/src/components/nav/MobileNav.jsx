@@ -62,35 +62,27 @@ export default function MobileNav() {
             <Drawer anchor={siteConfig.layout.navAnchor === 'right' ? 'right' : 'left'} open={open} onClose={toggleDrawer(false)}>
                 <Box sx={{ width: 240, padding: 2, boxSizing: 'border-box' }}>
                     <List>
-                        <ListItem
-                            button
-                            component={Link}
-                            to='/'
-                            onClick={toggleDrawer(false)}
-                            selected={location.pathname === '/'}
-                        >
-                            <ListItemText primary='Home' />
-                        </ListItem>
-
-                        <ListItem
-                            button
-                            component={Link}
-                            to='/about'
-                            onClick={toggleDrawer(false)}
-                            selected={location.pathname === '/about'}
-                        >
-                            <ListItemText primary='About' />
-                        </ListItem>
-
-                        <ListItem
-                            button
-                            component={Link}
-                            to='/contact'
-                            onClick={toggleDrawer(false)}
-                            selected={location.pathname === '/contact'}
-                        >
-                            <ListItemText primary='Contact' />
-                        </ListItem>
+                        {siteConfig.navLinks.map(({ label, path }) => (
+                            <ListItem disablePadding key={path}>
+                                <ListItemText
+                                    primary={
+                                        <Link
+                                            to={path}
+                                            onClick={toggleDrawer(false)}
+                                            style={{
+                                                display: 'block',
+                                                padding: '12px 16px',
+                                                textDecoration: 'none',
+                                                color: location.pathname === path ? '#fff' : 'inherit',
+                                                backgroundColor: location.pathname === path ? 'rgba(255,255,255,0.1)' : 'transparent',
+                                            }}
+                                        >
+                                            {label}
+                                        </Link>
+                                    }
+                                />
+                            </ListItem>
+                        ))}
                     </List>
                 </Box>
             </Drawer>
