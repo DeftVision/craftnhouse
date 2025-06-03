@@ -30,7 +30,34 @@ export const siteConfig = {
             {label: 'Testimonials', href: '/testimonials'},
             {label: 'Contact', href: '/contact'},
         ]
-    }
+    },
+    meta: {
+        '/': {
+            title: 'Welcome',
+            description: 'Landing page for modern web solutions.',
+        },
+        '/services': {
+            title: 'Services',
+            description: 'Explore our service offerings.',
+        },
+        '/testimonials': {
+            title: 'Testimonials',
+            description: 'See what our clients say.',
+        },
+        '/contact': {
+            title: 'Contact',
+            description: 'Get in touch with us.',
+        },
+        '/terms': {
+            title: 'Terms of Service',
+            description: 'Our service terms.',
+        },
+        '/privacy': {
+            title: 'Privacy Policy',
+            description: 'Our data handling policies.',
+        },
+    },
+
 }
 
 // layout:
