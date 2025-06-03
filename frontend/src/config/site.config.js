@@ -56,6 +56,10 @@ export const siteConfig = {
             title: 'Privacy Policy',
             description: 'Our data handling policies.',
         },
+        '*': {
+            title: '404 Not Found',
+            description: 'This page does not exist',
+        }
     },
 
 }
