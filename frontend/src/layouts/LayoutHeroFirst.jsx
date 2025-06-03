@@ -1,5 +1,7 @@
 import React from 'react';
 import ResponsiveNav from '../components/nav/ResponsiveNav';
+import Footer from '../components/Footer';
+
 import { Box, Typography } from '@mui/material';
 
 export default function LayoutHeroFirst({ children }) {
@@ -12,6 +14,7 @@ export default function LayoutHeroFirst({ children }) {
             <Box sx={{ mt: 4, px: 2 }}>
                 {children}
             </Box>
+            <Footer />
         </>
     );
 }

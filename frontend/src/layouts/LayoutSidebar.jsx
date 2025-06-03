@@ -1,6 +1,7 @@
 import React from 'react';
 import ResponsiveNav from '../components/nav/ResponsiveNav';
-import { Box, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
+import Footer from '../components/Footer';
 
 export default function LayoutSidebar({ children }) {
     return (
@@ -14,6 +15,7 @@ export default function LayoutSidebar({ children }) {
                     {children}
                 </Grid>
             </Grid>
+            <Footer />
         </>
     );
 }

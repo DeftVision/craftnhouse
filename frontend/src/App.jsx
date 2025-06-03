@@ -1,6 +1,9 @@
 import { Route, Routes } from 'react-router-dom'
 import { About, Contact, Home } from './pages/'
 import LayoutWrapper from './layouts/LayoutWrapper';
+import TermsOfService from './pages/TermsOfService';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+
 import { Box } from "@mui/material";
 
 function App() {
@@ -13,6 +16,8 @@ function App() {
                         <Route path="/" element={<Home/>}/>
                         <Route path="/about" element={<About/>}/>
                         <Route path="/contact" element={<Contact/>}/>
+                        <Route path="/terms" element={<TermsOfService />} />
+                        <Route path="/privacy" element={<PrivacyPolicy />} />
                     </Routes>
                 </Box>
             </LayoutWrapper>
