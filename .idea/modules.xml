@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/nvjsx.iml" filepath="$PROJECT_DIR$/.idea/nvjsx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vjsx.iml" filepath="$PROJECT_DIR$/.idea/vjsx.iml" />
     </modules>
   </component>
 </project>

@@ -1,7 +1,10 @@
 {
-  "name": "frontend",
+  "name": "vjsx",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
+  "description": "Vite + JavaScript template deployable to Vercel, Netlify, or AWS S3/CloudFront.",
+  "author": "Gabriel Barrett",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
