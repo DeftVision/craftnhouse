@@ -19,7 +19,7 @@ export const siteConfig = {
     },
     navLinks: {
         spa: [
-            {label: 'Home', href: '#hero'},
+            {label: 'Home', href: '/'},
             {label: 'Services', href: '#services'},
             {label: 'Testimonials', href: '#testimonials'},
             {label: 'Contact', href: '#contact'},
