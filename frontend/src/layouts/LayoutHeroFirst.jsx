@@ -13,8 +13,8 @@ export default function LayoutHeroFirst({ children }) {
             <ResponsiveNav />
 
             {/* Hero block */}
-            <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 8, textAlign: 'center' }}>
-                <Typography variant="h3">Hero First Layout</Typography>
+            <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 6, textAlign: 'center' }}>
+                {/*<Typography variant="h3">Hero First Layout</Typography>*/}
             </Box>
 
             {/* Main content fills space */}

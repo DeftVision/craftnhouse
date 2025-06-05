@@ -11,26 +11,46 @@ import { SinglePage, TermsOfService, PrivacyPolicy } from './pages';
 function App() {
     return (
         <LayoutWrapper>
-            <Box sx={{ mt: '64px', px: 2 }}>
-                <Routes>
-                    {siteConfig.layout.mode === 'spa' ? (
-                        <Route path="/" element={<SinglePage />} />
-                    ) : (
-                        <>
-                            <Route path="/" element={<Navigate to="/hero" replace />} />
-                            <Route path="/hero" element={<Hero />} />
-                            <Route path="/services" element={<Services />} />
-                            <Route path="/testimonials" element={<Testimonials />} />
-                            <Route path="/contact" element={<Contact />} />
-                        </>
-                    )}
+            <Routes>
+                {siteConfig.layout.mode === 'spa' ? (
+                    <Route path="/" element={<SinglePage />} />
+                ) : (
+                    <>
+                        <Route path="/" element={<Navigate to="/hero" replace />} />
+                        <Route path="/hero" element={<Hero />} />
+                        <Route
+                            path="/services"
+                            element={
+                                <Box sx={{ px: 2 }}>
+                                    <Services />
+                                </Box>
+                            }
+                        />
+                        <Route
+                            path="/testimonials"
+                            element={
+                                <Box sx={{ px: 2 }}>
+                                    <Testimonials />
+                                </Box>
+                            }
+                        />
+                        <Route
+                            path="/contact"
+                            element={
+                                <Box sx={{ px: 2 }}>
+                                    <Contact />
+                                </Box>
+                            }
+                        />
+                    </>
+                )}
 
-                    <Route path="/terms" element={<TermsOfService />} />
-                    <Route path="/privacy" element={<PrivacyPolicy />} />
-                    <Route path="*" element={<NotFound />} />
-                </Routes>
-            </Box>
+                <Route path="/terms" element={<TermsOfService />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
         </LayoutWrapper>
+
     );
 }
 

@@ -1,7 +1,7 @@
 export const siteConfig = {
-    siteName: 'Name',
+    siteName: 'Craft N House',
     layout: {
-        type: 'heroFirst',
+        type: 'centered',
         navAnchor: 'left',
         mode: 'spa',
         heroVariant: 'centered'
@@ -12,14 +12,14 @@ export const siteConfig = {
         contactSnackbar: false,
     },
     branding: {
-        primaryColor: '#32a852',
-        accentColor: '#fced19',
+        primaryColor: '#2F2032',
+        accentColor: '#A87CA0',
         headingFont: 'Playfair Display',
         bodyFont: 'Inter',
     },
     navLinks: {
         spa: [
-            {label: 'Hero', href: '#hero'},
+            {label: 'Home', href: '#hero'},
             {label: 'Services', href: '#services'},
             {label: 'Testimonials', href: '#testimonials'},
             {label: 'Contact', href: '#contact'},

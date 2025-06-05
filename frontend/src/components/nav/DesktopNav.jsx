@@ -3,13 +3,15 @@ import {
     AppBar,
     Toolbar,
     Box,
-    Typography,
     Button,
     useMediaQuery,
     useTheme
 } from '@mui/material';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { siteConfig } from '../../config/site.config';
+
+import Logo from '../../assets/logo.svg?react';
+
 
 export default function DesktopNav() {
     const theme = useTheme();
@@ -24,9 +26,9 @@ export default function DesktopNav() {
     return (
         <AppBar position='static'>
             <Toolbar sx={{ justifyContent: align }}>
-                <Typography variant='h6' sx={{ mr: 4 }}>
-                    {siteConfig.siteName}
-                </Typography>
+                <Box sx={{ mr: 4 }}>
+                    <Logo style={{ height: 48, width: 'auto', color: 'white' }} />
+                </Box>
                 <Box sx={{ display: 'flex', gap: 2 }}>
                     {navLinks.map(({ label, href }) => (
                         <Button

@@ -21,7 +21,7 @@ export default function SinglePage() {
 
     return (
         <>
-            <Box component="section" id="hero" sx={{ py: 8 }}>
+            <Box component="section" id="hero">
                 <Hero />
             </Box>
             <Box component="section" id="services" sx={{ py: 8 }}>
