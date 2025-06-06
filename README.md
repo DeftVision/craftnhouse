@@ -1,15 +1,13 @@
-# nvjsx = Netlify Vite JavaScript
+Author: Gabriel Barrett, Deft Vision LLC
 
-# Author: Gabriel Barrett - Deft Vision LLC May 31, 2025
-# This is a baseline for the "standard web application" product of Deft Vision LLC
+Date: May 2025
 
-# This code is not to be repurposed from its original intended use
-# This code is not to be duplicated for profit
-# This code can be modified by the Deft Vision Customer to meet the customer's needs / wants how they see fit.
-# This Code will be transferred after all costs have been paid in full to Deft Vision LLC by the customer
-# The code being transferred will only contain the frontend, except for the API calls / endpoints, secrets, passwords, integration connections and other sensitive files that GitHub considers sensitive information.
-# GitHub’s definition of sensitive information" is subject to change and Deft Vision LLC's code will abide by these changes.
+This is the standard web application product of Deft Vision LLC
 
-# Deft Vision reserves the right to destroy all code, files, and projects in Deft Vision LLC's possession after the code is accepted by the customer, if the customer abandons the project defined in the terms of service, or violates any # terms at any time or any point in development of the project, unless written permission is given by the customer and / or the "Maintenance Service Package" is purchased by the customer.
-# Code can be transferred via GitHub, .pdf, or .txt files.
+Majority of the configurations of this code is located in /src/config/site.config.js
 
+The monthly maintenance package is included at $0.00 for Craft "N" House only.
+
+Deft Vision will not fix or alter any changes made by a 3rd party, unless the maintenance package is purchased at full price of $29.99 for a minumum of 3 months.
+
+This code is not to be duplicated for profit. It was written for Craft ‘N’ House only and was transferred via GitHub.
